@@ -1,0 +1,28 @@
+#! /bin/sh
+#
+# init.d script for quectel app monitor
+
+set -e
+
+case "$1" in
+       start)
+                echo -n "Starting quectel app monitor: "
+                start-stop-daemon -S -b -a /usr/bin/ql_app_monitor
+                echo "done"
+                ;;
+       stop)
+                echo -n "Stopping quectel app monitor: "
+                start-stop-daemon -K -n ql_app_monitor 
+                echo "done"
+                ;;
+       restart)
+                $0 stop
+                $0 start
+                ;;
+       *)
+                echo "Usage: start_ql_app_monitor { start | stop | restart }" >&2
+                exit 1
+                ;;
+esac
+
+exit 0

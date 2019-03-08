@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<WifiBtCfg>
+		<Chip>0</Chip>
+		<Wifi>
+				
+		</Wifi>
+		<Bt>
+			<LocalName>Quectel-BT</LocalName>
+		</Bt>
+	</WifiBtCfg>
+</system>

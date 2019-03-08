@@ -1,0 +1,16 @@
+{
+    "interval":10,
+    "log_path":"/data/ql_app_monitor_log",
+    "sys_record":0,
+    "app_list" : [
+        {
+            "name":"netmgrd",
+            "action":"reboot"
+        },
+        {
+            "name":"atfwd_daemon",
+            "action":"restart",
+            "exec":"/etc/init.d/start_atfwd_daemon start"
+        }
+    ]
+}
